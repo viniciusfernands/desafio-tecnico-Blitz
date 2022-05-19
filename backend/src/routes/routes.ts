@@ -8,7 +8,7 @@ const router = Router();
 
 router.post('/tasks', taskMiddleware, statusMiddleware, tasks.create);
 
-router.get('/tasks');
+router.get('/tasks', tasks.getAll);
 
 router.get('/tasks/:id');
 

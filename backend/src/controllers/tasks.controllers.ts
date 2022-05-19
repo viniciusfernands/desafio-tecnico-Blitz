@@ -59,6 +59,20 @@ class TasksControllers {
       return res.status(500).json(ERROR_MESSAGE);
     }
   };
+
+  public destroy = async (req: Request, res: Response) => {
+    try {
+      const { id } = req.params;
+
+      const destroy = await this.service.destroy(id);
+
+      if (!destroy) return res.status(400).json({ message: 'Não foi possivel completar a ação' });
+
+      return res.status(202).json({ message: 'Tarefa excluida com sucesso' });
+    } catch (error) {
+      return res.status(500).json(ERROR_MESSAGE);
+    }
+  };
 }
 
 const controllers = new TasksControllers();

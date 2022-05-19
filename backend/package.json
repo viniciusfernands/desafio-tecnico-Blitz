@@ -4,7 +4,9 @@
   "description": "",
   "main": "./build/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev ./src/app.ts",
+    "lint": "eslint ./src --ext .ts",
+    "start": "npx tsc && npx prisma migrate dev && node ."
   },
   "keywords": [],
   "author": "Vinicius Fernandes",

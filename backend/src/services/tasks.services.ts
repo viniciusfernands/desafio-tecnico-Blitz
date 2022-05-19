@@ -13,6 +13,15 @@ class TasksServices {
       return false;
     }
   };
+
+  public getAll = async () => {
+    try {
+      const tasks = await this.server.tasks.findMany();
+      return tasks;
+    } catch (error) {
+      return false;
+    }
+  };
 }
 
 const services = new TasksServices();

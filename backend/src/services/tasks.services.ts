@@ -22,6 +22,15 @@ class TasksServices {
       return false;
     }
   };
+
+  public getById = async (id: string) => {
+    try {
+      const task = await this.server.tasks.findUnique({ where: { id: Number(id) } });
+      return task;
+    } catch (error) {
+      return false;
+    }
+  };
 }
 
 const services = new TasksServices();

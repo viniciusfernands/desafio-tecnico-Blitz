@@ -16,6 +16,6 @@ router.get('/tasks/:id', idMiddleware, tasks.getById);
 
 router.patch('/tasks/:id', idMiddleware, updateMiddleware, statusMiddleware, tasks.update);
 
-router.delete('/tasks/:id');
+router.delete('/tasks/:id', idMiddleware, tasks.destroy);
 
 export default router;

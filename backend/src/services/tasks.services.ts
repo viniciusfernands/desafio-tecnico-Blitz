@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { INewTask } from '../interfaces/tasks.interfaces';
+import { INewTask, IUpdate } from '../interfaces/tasks.interfaces';
 import prisma from '../server';
 
 class TasksServices {
@@ -27,6 +27,16 @@ class TasksServices {
     try {
       const task = await this.server.tasks.findUnique({ where: { id: Number(id) } });
       return task;
+    } catch (error) {
+      return false;
+    }
+  };
+
+  public update = async (id: string, updates: IUpdate) => {
+    try {
+      const update = await this.server.tasks
+        .update({ where: { id: Number(id) }, data: { ...updates } });
+      return update;
     } catch (error) {
       return false;
     }

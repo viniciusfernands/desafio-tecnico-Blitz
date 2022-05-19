@@ -41,6 +41,15 @@ class TasksServices {
       return false;
     }
   };
+
+  public destroy = async (id: string) => {
+    try {
+      const destroy = await this.server.tasks.delete({ where: { id: Number(id) } });
+      return destroy;
+    } catch (error) {
+      return false;
+    }
+  };
 }
 
 const services = new TasksServices();

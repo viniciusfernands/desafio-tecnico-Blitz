@@ -19,6 +19,18 @@ class TasksControllers {
       return res.status(500).json(ERROR_MESSAGE);
     }
   };
+
+  public getAll = async (_req: Request, res: Response) => {
+    try {
+      const tasks = await this.service.getAll();
+
+      if (!tasks) return res.status(400).json({ message: 'Não foi possivel listar as tarefas' });
+
+      return res.status(200).json(tasks);
+    } catch (error) {
+      return res.status(500).json(ERROR_MESSAGE);
+    }
+  };
 }
 
 const controllers = new TasksControllers();

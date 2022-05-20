@@ -42,10 +42,10 @@ aprensenta também requisitos técnios e funcionalidades que devem estar present
   <br/>
   Em pastas separadas acesse um terminal dentro das pasta backend e um terminal dentro da pasta frontend:
   
-    No terminal do backend rode:
+   No terminal do backend rode:
     
       npm start
       
-    No terminal do frontend rode:
+   No terminal do frontend rode:
     
       npm start

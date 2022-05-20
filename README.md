@@ -39,7 +39,7 @@ aprensenta também requisitos técnios e funcionalidades que devem estar present
     docker-compose up -d --build
     
   Este comando irá iniciar o banco de dados MySql em um container.
-  <br/>
+  ##
   Em pastas separadas acesse um terminal dentro das pasta backend e um terminal dentro da pasta frontend:
   
    No terminal do backend rode:

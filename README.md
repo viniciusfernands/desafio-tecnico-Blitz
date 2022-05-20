@@ -21,6 +21,7 @@ aprensenta também requisitos técnios e funcionalidades que devem estar present
   
     - Eslint,
     - Prettier
+##
 
 ### Como rodar a aplicação
 

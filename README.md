@@ -25,28 +25,4 @@ aprensenta também requisitos técnios e funcionalidades que devem estar present
 
 ### Como rodar a aplicação
 
- - Como a entrega se deu antes da conclusão do desafio, a aplicação ainda está como desenvolvimento.
- 
- Primeiro:
-  
-  - Antes de começar tenha na sua maquina o docker instalado.
-  
-  Clone o repositorio na pasta desejada usando:
-    
-    git clone git@github.com:viniciusfernands/desafio-tecnico-Blitz.git
-    
-  Entre na pasta criada e rode:
-  
-    docker-compose up -d --build
-    
-  Este comando irá iniciar o banco de dados MySql em um container.
-  ##
-  Em pastas separadas acesse um terminal dentro das pasta backend e um terminal dentro da pasta frontend:
-  
-   No terminal do backend rode:
-    
-      npm start
-      
-   No terminal do frontend rode:
-    
-      npm start
+ **EM BREVE **
